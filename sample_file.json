@@ -1,0 +1,543 @@
+{
+    "adapters": [
+        {
+            "model": "GenericNetworkAdapter",
+            "ip": "tcp://X.X.X.X:4664",
+            "ports": [
+                {
+                    "id": "LG_left",
+                    "name": "Left Screen",
+                    "methods": [
+                        {
+                            "id": "power_toggle",
+                            "name": "On",
+                            "command": "\\x3A\\x30\\x31\\x53\\x30\\x30\\x30\\x31\\x0D",
+                            "type": "action"
+                        },
+                        {
+                            "id": "power",
+                            "name": "Power",
+                            "command": "\\x3A\\x30\\x31\\x53\\x30\\x30\\x30\\x%\\x0D",
+                            "params": [
+                                {
+                                    "id": "on",
+                                    "name": "On",
+                                    "value": "33"
+                                },
+                                {
+                                    "id": "off",
+                                    "name": "Off",
+                                    "value": "32"
+                                }
+                            ],
+                            "type": "actions"
+                        },
+                        {
+                            "id": "backlight",
+                            "name": "Backlight",
+                            "command": "\\x3A\\x30\\x31\\x53\\x30\\x30\\x30\\x%\\x0D",
+                            "params": [
+                                {
+                                    "id": "on",
+                                    "name": "On",
+                                    "value": "31"
+                                },
+                                {
+                                    "id": "off",
+                                    "name": "Off",
+                                    "value": "30"
+                                }
+                            ],
+                            "type": "actions"
+                        },
+                        {
+                            "id": "source",
+                            "name": "Source",
+                            "command": "\\x3A\\x30\\x31\\x53\\x3A%\\x0D",
+                            "params": [
+                                {
+                                    "id": "hdmi1",
+                                    "name": "HDMI1",
+                                    "value": "\\x30\\x30\\x31"
+                                },
+                                {
+                                    "id": "hdmi2",
+                                    "name": "HDMI2",
+                                    "value": "\\x30\\x30\\x32"
+                                },
+                                {
+                                    "id": "hdmi3",
+                                    "name": "HDMI3",
+                                    "value": "\\x30\\x32\\x31"
+                                },
+                                {
+                                    "id": "android",
+                                    "name": "ANDROID",
+                                    "value": "\\x31\\x30\\x31"
+                                }
+                            ],
+                            "type": "actions"
+                        }
+                    ],
+                    "response_filter": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "model": "GenericNetworkAdapter",
+            "ip": "tcp://X.X.X.X:4664",
+            "ports": [
+                {
+                    "id": "LG_right",
+                    "name": "Right Screen",
+                    "methods": [
+                        {
+                            "id": "power_toggle",
+                            "name": "On",
+                            "command": "\\x3A\\x30\\x31\\x53\\x30\\x30\\x30\\x31\\x0D",
+                            "type": "action"
+                        },
+                        {
+                            "id": "power",
+                            "name": "Power",
+                            "command": "\\x3A\\x30\\x31\\x53\\x30\\x30\\x30\\x%\\x0D",
+                            "params": [
+                                {
+                                    "id": "on",
+                                    "name": "On",
+                                    "value": "33"
+                                },
+                                {
+                                    "id": "off",
+                                    "name": "Off",
+                                    "value": "32"
+                                }
+                            ],
+                            "type": "actions"
+                        },
+                        {
+                            "id": "backlight",
+                            "name": "Backlight",
+                            "command": "\\x3A\\x30\\x31\\x53\\x30\\x30\\x30\\x%\\x0D",
+                            "params": [
+                                {
+                                    "id": "on",
+                                    "name": "On",
+                                    "value": "31"
+                                },
+                                {
+                                    "id": "off",
+                                    "name": "Off",
+                                    "value": "30"
+                                }
+                            ],
+                            "type": "actions"
+                        },
+                        {
+                            "id": "source",
+                            "name": "Source",
+                            "command": "\\x3A\\x30\\x31\\x53\\x3A%\\x0D",
+                            "params": [
+                                {
+                                    "id": "hdmi1",
+                                    "name": "HDMI1",
+                                    "value": "\\x30\\x30\\x31"
+                                },
+                                {
+                                    "id": "hdmi2",
+                                    "name": "HDMI2",
+                                    "value": "\\x30\\x30\\x32"
+                                },
+                                {
+                                    "id": "hdmi3",
+                                    "name": "HDMI3",
+                                    "value": "\\x30\\x32\\x31"
+                                },
+                                {
+                                    "id": "android",
+                                    "name": "ANDROID",
+                                    "value": "\\x31\\x30\\x31"
+                                }
+                            ],
+                            "type": "actions"
+                        }
+                    ],
+                    "response_filter": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "model": "GenericNetworkAdapter",
+            "ip": "tcp://X.X.X.X:49152",
+            "ports": [
+                {
+                    "id": "rmc3_lighting",
+                    "name": "Lights",
+                    "methods": [
+                        {
+                            "id": "power_toggle",
+                            "name": "On",
+                            "command": "hey what preset you on?",
+                            "type": "action"
+                        },
+                        {
+                            "id": "preset",
+                            "name": "Presets",
+                            "command": "preset0%",
+                            "params": [
+                                {
+                                    "id": "1",
+                                    "name": "Full",
+                                    "value": "1"
+                                },
+                                {
+                                    "id": "2",
+                                    "name": "Medium",
+                                    "value": "2"
+                                },
+                                {
+                                    "id": "3",
+                                    "name": "Present",
+                                    "value": "3"
+                                },
+                                {
+                                    "id": "0",
+                                    "name": "Off",
+                                    "value": "0"
+                                }
+                            ],
+                            "type": "actions"
+                        }
+                    ],
+                    "response_filter": [
+                        "response_preset00",
+                        "response_preset01",
+                        "response_preset02",
+                        "response_preset03"
+                    ]
+                }
+            ]
+        },
+        {
+            "model": "GenericNetworkAdapter",
+            "ip": "tcp://X.X.X.X:2202",
+            "ports": [
+                {
+                    "id": "mxa910",
+                    "name": "Ceiling Mic",
+                    "methods": [
+                        {
+                            "id": "main_unmute",
+                            "name": "Unmute",
+                            "command": "< SET DEVICE_AUDIO_MUTE TOGGLE >\\x0D",
+                            "type": "action"
+                        },
+                        {
+                            "id": "mute",
+                            "name": "Status",
+                            "command": "< SET DEVICE_AUDIO_MUTE % >\\x0D",
+                            "params": [
+                                {
+                                    "id": "mute",
+                                    "name": "Mute",
+                                    "value": "ON"
+                                },
+                                {
+                                    "id": "unmute",
+                                    "name": "Unmute",
+                                    "value": "OFF"
+                                }
+                            ],
+                            "type": "actions"
+                        },
+                        {
+                            "id": "colour_unmuted",
+                            "name": "LED Colour unmuted",
+                            "command": "< SET LED_COLOR_UNMUTED % >\\x0D",
+                            "params": [
+                                {
+                                    "id": "red",
+                                    "name": "Red",
+                                    "value": "RED"
+                                },
+                                {
+                                    "id": "green",
+                                    "name": "Green",
+                                    "value": "GREEN"
+                                },
+                                {
+                                    "id": "blue",
+                                    "name": "Blue",
+                                    "value": "BLUE"
+                                },
+                                {
+                                    "id": "pink",
+                                    "name": "Pink",
+                                    "value": "PINK"
+                                },
+                                {
+                                    "id": "purple",
+                                    "name": "Purple",
+                                    "value": "PURPLE"
+                                },
+                                {
+                                    "id": "yellow",
+                                    "name": "Yellow",
+                                    "value": "YELLOW"
+                                },
+                                {
+                                    "id": "orange",
+                                    "name": "Orange",
+                                    "value": "ORANGE"
+                                },
+                                {
+                                    "id": "white",
+                                    "name": "White",
+                                    "value": "WHITE"
+                                },
+                                {
+                                    "id": "gold",
+                                    "name": "Gold",
+                                    "value": "GOLD"
+                                },
+                                {
+                                    "id": "yellowgreen",
+                                    "name": "Yellow Green",
+                                    "value": "YELLOWGREEN"
+                                },
+                                {
+                                    "id": "turquoise",
+                                    "name": "Turquoise",
+                                    "value": "TURQUOISE"
+                                },
+                                {
+                                    "id": "powderblue",
+                                    "name": "Powder Blue",
+                                    "value": "POWDERBLUE"
+                                },
+                                {
+                                    "id": "cyan",
+                                    "name": "Cyan",
+                                    "value": "CYAN"
+                                },
+                                {
+                                    "id": "skyblue",
+                                    "name": "Sky Blue",
+                                    "value": "SKYBLUE"
+                                },
+                                {
+                                    "id": "lightpurple",
+                                    "name": "Light Purple",
+                                    "value": "LIGHTPURPLE"
+                                },
+                                {
+                                    "id": "violet",
+                                    "name": "Violet",
+                                    "value": "VIOLET"
+                                },
+                                {
+                                    "id": "orchid",
+                                    "name": "Orchid",
+                                    "value": "ORCHID"
+                                }
+                            ],
+                            "type": "actions"
+                        },
+                        {
+                            "id": "colour_muted",
+                            "name": "LED Colour muted",
+                            "command": "< SET LED_COLOR_MUTED % >\\x0D",
+                            "params": [
+                                {
+                                    "id": "red",
+                                    "name": "Red",
+                                    "value": "RED"
+                                },
+                                {
+                                    "id": "green",
+                                    "name": "Green",
+                                    "value": "GREEN"
+                                },
+                                {
+                                    "id": "blue",
+                                    "name": "Blue",
+                                    "value": "BLUE"
+                                },
+                                {
+                                    "id": "pink",
+                                    "name": "Pink",
+                                    "value": "PINK"
+                                },
+                                {
+                                    "id": "purple",
+                                    "name": "Purple",
+                                    "value": "PURPLE"
+                                },
+                                {
+                                    "id": "yellow",
+                                    "name": "Yellow",
+                                    "value": "YELLOW"
+                                },
+                                {
+                                    "id": "orange",
+                                    "name": "Orange",
+                                    "value": "ORANGE"
+                                },
+                                {
+                                    "id": "white",
+                                    "name": "White",
+                                    "value": "WHITE"
+                                },
+                                {
+                                    "id": "gold",
+                                    "name": "Gold",
+                                    "value": "GOLD"
+                                },
+                                {
+                                    "id": "yellowgreen",
+                                    "name": "Yellow Green",
+                                    "value": "YELLOWGREEN"
+                                },
+                                {
+                                    "id": "turquoise",
+                                    "name": "Turquoise",
+                                    "value": "TURQUOISE"
+                                },
+                                {
+                                    "id": "powderblue",
+                                    "name": "Powder Blue",
+                                    "value": "POWDERBLUE"
+                                },
+                                {
+                                    "id": "cyan",
+                                    "name": "Cyan",
+                                    "value": "CYAN"
+                                },
+                                {
+                                    "id": "skyblue",
+                                    "name": "Sky Blue",
+                                    "value": "SKYBLUE"
+                                },
+                                {
+                                    "id": "lightpurple",
+                                    "name": "Light Purple",
+                                    "value": "LIGHTPURPLE"
+                                },
+                                {
+                                    "id": "violet",
+                                    "name": "Violet",
+                                    "value": "VIOLET"
+                                },
+                                {
+                                    "id": "orchid",
+                                    "name": "Orchid",
+                                    "value": "ORCHID"
+                                }
+                            ],
+                            "type": "actions"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "response_filters": [
+        {
+            "name":"response_preset00",
+            "filter_regex":"preset00",
+            "trigger_event":"custom_event_1"
+        },
+        {
+            "name":"response_preset01",
+            "filter_regex":"preset01",
+            "trigger_event":"custom_event_2"
+        },
+        {
+            "name":"response_preset02",
+            "filter_regex":"preset02",
+            "trigger_event":"custom_event_2"
+        },
+        {
+            "name":"response_preset03",
+            "filter_regex":"preset03",
+            "trigger_event":"custom_event_2"
+        }
+    ],
+    "styles":[
+        "LG_left.main_method=power_toggle",
+        "LG_left.power_toggle.icon=icon_power",
+        "LG_left.icon=icon_tv",
+        "LG_left.power.invisible=true",
+        "LG_left.source.invisible=true",
+        "LG_right.main_method=power_toggle",
+        "LG_right.power_toggle.icon=icon_power",
+        "LG_right.icon=icon_tv",
+        "LG_right.power.invisible=true",
+        "LG_right.source.invisible=true",
+        "rmc3_lighting.main_method=power_toggle",
+        "rmc3_lighting.power_toggle.icon=icon_power",
+        "rmc3_lighting.icon=icon_light",
+        "rmc3_lighting.brightness.up.icon=icon_up",
+        "rmc3_lighting.brightness.down.icon=icon_down",
+        "mxa910.main_method=main_unmute",
+        "mxa910.main_unmute.icon=icon_power",
+        "mxa910.icon=icon_ceiling_mic",
+        "mxa910.main_method=main_unmute",
+        "mxa910.main_unmute.icon=icon_power",
+        "mxa910.icon=icon_ceiling_mic",
+        "mxa910.colour_unmuted.invisible=true",
+        "mxa910.colour_muted.invisible=true"
+    ],
+    "rules":
+    {
+        "meeting_started": [
+            "LG_left.backlight.on",
+            "LG_right.backlight.on",
+            "rmc3_lighting.preset.1",
+            "mxa910.mute.unmute",
+            "LG_left.source.hdmi1",
+            "LG_right.source.hdmi1"
+        ],
+        "meeting_ended": [
+            "mxa910.mute.mute",
+            "rmc3_lighting.preset.2"
+        ],
+        "microphone_muted":[
+            "mxa910.mute.mute"
+        ],
+        "microphone_unmuted":[
+            "mxa910.mute.unmute"
+        ],
+        "video_started":[
+
+        ],
+        "video_stopped":[
+
+        ],
+        "operation_time_started":[
+            "LG_left.backlight.on",
+            "LG_right.backlight.on",
+            "LG_left.source.hdmi1",
+            "LG_right.source.hdmi1",
+            "rmc3_lighting.preset.2",
+            
+            "mxa910.colour_muted.red",
+            "mxa910.colour_unmuted.green"
+        ],
+        "operation_time_ended":[
+            "LG_left.backlight.off",
+            "LG_right.backlight.off",
+            "rmc3_lighting.power.off"
+        ],
+        "custom_event_1":[
+            "rmc3_lighting.preset.1"
+        ],
+        "custom_event_2":[
+            "rmc3_lighting.preset.0"
+        ]
+    }
+}
